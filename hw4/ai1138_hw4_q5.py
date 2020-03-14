@@ -1,0 +1,21 @@
+def count_lowercase(s, low, high):
+    if(low > high):
+        return 0
+    else:
+        if(ord(s[low]) >= 97 and ord(s[low]) <= 122):
+            return 1 + count_lowercase(s, low+1, high)
+        else:
+            return 0 + count_lowercase(s, low+1, high)
+def is_number_of_lowercase_even(s, low, high):
+
+    if(low > high):
+        count+=0
+    else:
+        if(ord(s[low]) >= 97 and ord(s[low]) <= 122):
+            count += 1 + is_number_of_lowercase_even(s, low+1, high)
+        else:
+            count += 0 + is_number_of_lowercase_even(s, low+1, high)
+    if(count % 2 == 0):
+        return True
+    else:
+        return False
